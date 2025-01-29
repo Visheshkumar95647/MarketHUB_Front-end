@@ -1,0 +1,792 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Fjalla+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Fjalla+One&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+.bg-img{
+  height: 100vh;
+ 
+}
+a{
+  color: rgb(5, 49, 5);
+  text-decoration: none;
+}
+/* Sign Up */
+
+.sign{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-image: radial-gradient( rgb(5,49,5),black);
+}
+
+.sign-credentials{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+  height: max-content;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 1px 1px 10px white;
+}
+.sign button{
+  width: 100px;
+  transition:all 0.5s ease-in-out;
+  background-color: yellow;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.sign button:hover{
+  background-color: black;
+  color: yellow;
+}
+
+/* Login */
+.login{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-image: radial-gradient( rgb(5,49,5),black);
+}
+
+.login .btn{
+  display: flex;
+  gap: 10px;
+}
+.login button{
+  width: 100px;
+  transition:all 0.5s ease-in-out;
+}
+.login .login-btn{
+  background-color: yellow;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.login .sign-btn{
+  background-color: aqua;
+  color: black;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.login .sign-btn:hover{
+  color:white;
+  background-color: red;
+}
+.login .login-btn:hover{
+  color: yellow;
+  background-color: black;
+}
+.login-credentials{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 1px 1px 10px white;
+}
+.login-credentials .logo img{
+  width: 150px;
+}
+
+
+/* SignUp  Login Common*/
+
+.input{
+  /* padding-top: 50px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  
+}
+.input input{
+  height: 45px;
+  width: 25vw;
+  min-width: 230px;
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 5px;
+  background: none;
+  color: white;
+  border: 2px rgb(137, 133, 133) solid;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+
+
+/* Starting */
+.logo-img img{
+  width: 45vw;
+  max-width: 350px;
+  min-width:250px;
+  padding-top: 50px;
+}
+
+.start{
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-sidebar{
+  background-image: radial-gradient( rgb(5,49,5),black);
+  height: 100vh;
+  width: 20vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 900;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.left-sidebar .img img{
+  width: 15vw;
+  max-width: 180px;
+  min-width:100px;
+  padding-top: 50px;
+}
+.list h3{
+  color: white;
+}
+.list .icon img{
+  width: 25px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+
+.right-sidebar{
+  background-image: radial-gradient( rgb(5,49,5),black);
+  height: 100vh;
+  width: 20vw;
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding-top: 100px;
+  color: white;
+  font-size: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  gap: 10px;
+  font-family: "Kanit", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  text-shadow: 1px 1px 20px yellow;
+}
+
+.right-sidebar .profileimg img{
+  width: 80px;
+  border-radius: 200px;
+}
+/* down - nav */
+.down-nav{
+  display: none;
+  justify-content: center;
+}
+.down-nav .down{
+  position: fixed;
+  bottom: 0px;
+  background-image: radial-gradient( rgb(5,49,5),black);
+  height: 60px;
+  padding-left: 20px;
+  padding-right: 20px;
+  z-index: 10;
+  width: 95vw;
+  border-top: solid 5px white;
+  border-top-left-radius: 200px;
+  border-top-right-radius: 200px;
+}
+.down{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.down .list{
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  gap: 20px;
+}
+
+/* Home Page */
+
+.uploads{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5rem;
+}
+.middle-bar .top .profileimage{
+  width: 60px;
+  height: 60px;
+  border-radius: 100px;
+  border: 2px solid rgb(255, 255, 255);
+  
+}
+.middle-bar{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  /* gap: 00px; */
+  min-height: 100vh;
+  background-color: rgb(0, 0, 0);
+}
+
+.middle{
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+/*  */
+.middle .slide-container{
+  width: 468px;
+}
+/*  */
+.slide-container img{
+  height: 313.16px;
+  width: 468px;
+}
+/*  */
+.top{
+  background-image: linear-gradient(rgb(5,49,5),black);
+  width: 470px;
+  height: 10vh;
+  padding: 10px;
+  border-radius: 10px;
+}
+.top a{
+  font-family:'Courier New', Courier, monospace;
+  font-weight: 500;
+  font-size: 15px;
+  color: white;
+}
+.top .top-data{
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+/*  */
+.bottom{
+  display: flex;
+  width: 470px;
+  justify-content: space-between;
+  align-items: center;
+  background-image: linear-gradient(black , rgb(5,49,5));
+  height: 10vh;
+  border-radius: 10px;
+}
+.bottom button{
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.bottom button img{
+  width: 30px;
+  margin: 20px;
+}
+.feed{
+  display: flex;
+}
+
+/* Search Component */
+
+
+
+.searching{
+  height: 100vh;
+}
+.search-bar{
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+.search-bar input{
+  height: 40px;
+  width: 20rem;
+  padding: 10px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.259);
+  color: white;
+  border: 1px solid white;
+}
+.search-bar button{
+  border: none;
+  width: 5rem;
+  height: 40px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.search-top{
+  display: flex;
+  align-items: center;
+  height: 50px;
+  width: 25.5rem;
+  background-color: rgb(5, 49, 5);
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.search-top-data{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+.search-top-data .proname a{
+  font-family:'Courier New', Courier, monospace;
+  font-weight: 500;
+  font-size: 15px;
+  color: white;
+  font-style: normal;
+}
+.search-top-data img{
+  width: 40px;
+  height: 40px;
+  border-radius: 100px;
+  border: 2px solid rgb(255, 255, 255);
+}
+.search-results{
+  height:200px;
+  overflow-y: scroll;
+}
+.searching .no-user{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 15px;
+}
+.searching .loading{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Inspect ProfileSection */
+.profileSec{
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 20px;
+  padding: 100px;
+}
+.profileName,.profileUsername,.profileNumber,.profileAddress,.profileCity,.profilePin{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+}
+.profileSec .value{
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 200;
+}
+.profileSec .key{
+  color: yellow;
+  font-weight: bold;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.profileSec .profileImg img{
+  width: 150px;
+  height: 150px;
+  border-radius:200px;
+  box-shadow: 1px 1px 20px rgb(181, 180, 180);
+}
+
+.profileSec .message_go{
+  display: flex;
+  gap: 50px;
+}
+ button{
+  width: 150px;
+  height: 50px;
+  font-size: 15px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  transition: all 0.01s ease-in-out;
+  border:none;
+  border-radius: 10px;
+}
+.message_go .message button{
+  background-color: rgb(0, 183, 255);
+}
+
+ .goHome button{
+  background-color:yellow;
+}
+ .message button:hover{
+  background-color: white;
+  transform: rotate(1deg) ;
+}
+ .goHome button:hover{
+  background-color: white;
+  transform: rotate(1deg) ;
+}
+
+
+/* post */
+
+.post{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  gap: 50px;
+  height: 100vh;
+}
+.post input{
+  font-size: 20px;
+  color: white;
+  height: 30px;
+  box-shadow: 1px 1px 80px  yellow;
+  border-radius: 20px;
+}
+.post button{
+  width: 150px;
+  height: 50px;
+  font-size: 15px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  transition: all 0.01s ease-in-out;
+  border:none;
+  border-radius: 10px;
+  background-color: rgb(0, 183, 255);
+}
+.post button:hover{
+  background-color: white;
+  transform: rotate(1deg) ;
+}
+
+/* Setting */
+
+.setting{
+  height: 100vh;
+  margin-top: 50px;
+}
+
+
+
+
+
+/* chat */
+
+.chats{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100vw;
+  height: 100vh;
+}
+.chats .top-part{
+  height: 70px;
+  padding: 10px;
+  border-bottom: 2px solid rgba(128, 128, 128, 0.232);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.chats .middle-part{
+  height: 100vh;
+}
+.chats .lower-part{
+  height: 60px;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.chats .top-part .profile{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.chats .top-part .profile .arrow-back img{
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+.chat-profile-img img{
+  width: 50px;
+  height: 50px;
+  border: 2px white solid;
+  border-radius: 50px;
+}
+.chat-profile-username p {
+  font-size: 18px;
+  font-family: 'Courier New', Courier, monospace;
+  color: white;
+}
+.chats input{
+  height: 50px;
+  padding: 10px;
+  border: 2px solid rgba(128, 128, 128, 0.232);
+  background: none;
+  width: 95vw;
+  border-radius: 5px;
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+}
+/* ALL chats Data  */
+.all-chats-data{
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.all-chats a{
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+  cursor: pointer;
+}
+
+.getallChat{
+  height: 100vh;
+  overflow-y: scroll;
+}
+::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+}
+
+/* Scrollbar thumb (the part that moves) */
+::-webkit-scrollbar-thumb {
+  background-color: gray; /* Initial color of the thumb */
+  border-radius: 10px;
+}
+
+/* Scrollbar track (background) */
+::-webkit-scrollbar-track {
+  background-color: rgba(128, 128, 128, 0.232);
+  border-radius: 10px;
+}
+
+.all-chats{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 10px;
+  display: flex;
+  align-items: center;
+  height: 60px;
+  width: 100vw;
+  background-color: rgb(5, 49, 5);
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  margin-left: 80px;  
+  margin-top: 10px;
+  margin-right: 40px;
+}
+.left-all-chats{
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  height: 90vh;
+  width: 100vw;
+  justify-content: space-between;
+}
+
+/* Displaying Messgage */
+
+.chats .middle-part{
+  color: white;
+  padding: 20px;
+  overflow-y: scroll;
+  position: relative;
+}
+
+.chats .middle-part .right-msg{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.chats .middle-part .left-msg{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.chats .middle-part .pro img{
+  width: 40px;
+  height: 40px;
+  border: 2px solid rgba(255, 255, 255, 0.179);
+  border-radius: 100px;
+}
+.chats .middle-part .right-msg p{
+  background-color: rgb(5, 49, 5);
+  margin: 10px;
+  min-height: 40px;
+  max-height: max-content;
+  width: max-content;
+  max-width: 200px;
+  padding: 10px;
+  border-radius: 10px;
+}
+.chats .middle-part .left-msg p{
+  background-color:rgba(255, 255, 0, 0.778);
+  margin: 10px;
+  min-height: 40px;
+  max-height: max-content;
+  width: max-content;
+  max-width: 200px;
+  padding: 10px;
+  border-radius: 10px;
+  color: black;
+}
+
+
+.chats .lower-part img{
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+.parent-date-div{
+  height: max-content;
+}
+.date-label{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  top: 0px;
+}
+
+.date-label p{
+  height: max-content;
+  width:max-content;
+  padding:5px;
+  background-color: rgba(128, 128, 128, 0.318);
+  border-radius: 5px;
+}
+
+
+/* media queries for Home */
+
+@media (max-width:950px){
+  .middle .slide-container{
+    width: 400px;
+  }
+  .slide-container img{
+    height: 300px;
+    width:400px;
+  }
+  .top{
+    width: 400px;
+  }
+  .bottom{
+    width: 400px;
+  }
+
+  /* right side bar button */
+  .right-sidebar button{
+    width: 100px;
+  }
+}
+
+
+/* remove right side bar */
+@media (max-width:700px){
+  .right-sidebar{
+    display: none;
+  }
+  .left-sidebar{
+    display: none;
+  }
+  .down-nav{
+    display: flex;
+  }
+  body{
+    overflow-x: hidden;
+  }
+  .all-chats-data .left-all-chats .all-chats{
+    width: 100vw;
+  }
+  /* .logo-img img{
+    padding-right: 17%;
+  }
+  .middle-bar{
+   width: 100vw;
+   display: flex;
+   align-items: end;
+   padding-right:8%;
+  } */
+}
+
+@media (max-width:500px){
+  .middle .slide-container{
+    width: 315px;
+  }
+  .slide-container img{
+    height: 260px;
+    width:315px;
+  }
+  .top{
+    width: 315px;
+  }
+  .bottom{
+    width: 315px;
+  }
+
+}
+
+@media (max-width:450px){
+  .down .list{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    gap: 10px;
+  }
+  .profileSec{
+    scale: 0.8;
+  }
+  .post input{
+    scale: 0.7;
+  }
+  .search-bar{
+    scale: 0.68;
+  }
+  .search-top{
+    scale: 0.68;
+  }
+}
+
+@media (max-width:350px){
+  .middle .slide-container{
+    width: 280px;
+  }
+
+  .slide-container img{
+    height: 200px;
+    width:280px;
+  }
+  .top{
+    width: 280px;
+  }
+  .bottom{
+    width: 280px;
+  }
+  body{
+    overflow-x: hidden;
+  }
+
+}

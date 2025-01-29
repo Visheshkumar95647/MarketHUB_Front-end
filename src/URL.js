@@ -1,0 +1,1 @@
+export const baseURL = `https://markethub-backend-werf.onrender.com`;
