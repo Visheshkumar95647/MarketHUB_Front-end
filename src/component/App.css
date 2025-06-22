@@ -393,7 +393,9 @@ a{
   justify-content: center;
   align-items: start;
   gap: 20px;
-  padding: 100px;
+  width: 90vw;
+  padding-top:50px;
+  padding-bottom:50px;
 }
 .profileName,.profileUsername,.profileNumber,.profileAddress,.profileCity,.profilePin{
   display: flex;
@@ -412,8 +414,8 @@ a{
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .profileSec .profileImg img{
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   border-radius:200px;
   box-shadow: 1px 1px 20px rgb(181, 180, 180);
 }
@@ -423,7 +425,7 @@ a{
   gap: 50px;
 }
  button{
-  width: 150px;
+  width: 100px;
   height: 50px;
   font-size: 15px;
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -702,6 +704,12 @@ a{
     width: 100px;
   }
 }
+@media (min-width:700px){
+  .profileSec{
+    width: 50vw;
+    padding-left: 50px;
+  }
+}
 
 
 /* remove right side bar */
@@ -717,6 +725,12 @@ a{
   }
   body{
     overflow-x: hidden;
+  }
+  .middle-bar{
+    width: 100vw;
+  }
+  .profileSec{
+    /* display: none; */
   }
   .all-chats-data .left-all-chats .all-chats{
     width: 100vw;

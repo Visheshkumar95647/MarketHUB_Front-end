@@ -9,6 +9,7 @@ import "aos/dist/aos.css";
 import Home from "../Home/Home";
 import ChatContext from "../Chat/ChatProvider";
 import { baseURL } from "../../URL";
+import { imgURL } from "../../imgURL";
 export default function Starting() {
   const { prodata } = useContext(ProfileContext);
   const { checkLogo } = useContext(ChatContext);
@@ -69,7 +70,8 @@ export default function Starting() {
                 }}
               >
                 <div className="icon">
-                  <img src="h.png" alt="Home" />
+                  <img src="h.png" alt="Home" 
+  loading="lazy" />
                 </div>
               </div>
               <br />
@@ -86,7 +88,8 @@ export default function Starting() {
                 }}
               >
                 <div className="icon">
-                  <img src="sea.png" alt="Search" />
+                  <img src="sea.png" alt="Search" 
+  loading="lazy" />
                 </div>
               </div>
               <br />
@@ -104,7 +107,8 @@ export default function Starting() {
                 }}
               >
                 <div className="icon">
-                  <img src="pro.png" alt="Search" />
+                  <img src="pro.png" alt="Search" 
+  loading="lazy" />
                 </div>
               </div>
               <br />
@@ -121,7 +125,7 @@ export default function Starting() {
                 }}
               >
                 <div className="icon">
-                  <img src="msg.png" alt="Message" />
+                  <img src="msg.png" alt="Message" loading="lazy" />
                 </div>
               </div>
               <br />
@@ -139,7 +143,7 @@ export default function Starting() {
                 }}
               >
                 <div className="icon">
-                  <img src="upload.png" alt="Post" />
+                  <img src="upload.png" alt="Post" loading="lazy" />
                 </div>
               </div>
               <br />
@@ -156,7 +160,7 @@ export default function Starting() {
                 }}
               >
                 <div className="icon">
-                  <img src="setting.png" alt="Setting" />
+                  <img src="setting.png" alt="Setting"  loading="lazy"/>
                 </div>
               </div>
             </div>
@@ -167,7 +171,7 @@ export default function Starting() {
         {!checkMsg && (
           <div className="left-sidebar">
             <div className="img">
-              <img src="l-markethub.png" alt="Market Logo" />
+              <img src="l-markethub.png" alt="Market Logo" loading="lazy" />
             </div>
             <div className="list">
               <div
@@ -182,7 +186,7 @@ export default function Starting() {
                 }}
               >
                 <div className="icon">
-                  <img src="h.png" alt="Home" />
+                  <img src="h.png" alt="Home" loading="lazy" />
                 </div>
                 <div>
                   <h3>Home</h3>
@@ -202,7 +206,7 @@ export default function Starting() {
                 }}
               >
                 <div className="icon">
-                  <img src="sea.png" alt="Search" />
+                  <img src="sea.png" alt="Search" loading="lazy" />
                 </div>
                 <div>
                   <h3>Search</h3>
@@ -223,7 +227,7 @@ export default function Starting() {
                 }}
               >
                 <div className="icon">
-                  <img src="pro.png" alt="Search" />
+                  <img src="pro.png" alt="Search" loading="lazy" />
                 </div>
                 <div>
                   <h3>Profile</h3>
@@ -243,7 +247,7 @@ export default function Starting() {
                 }}
               >
                 <div className="icon">
-                  <img src="msg.png" alt="Message" />
+                  <img src="msg.png" alt="Message" loading="lazy" />
                 </div>
                 <div>
                   <h3>Message</h3>
@@ -264,7 +268,7 @@ export default function Starting() {
                 }}
               >
                 <div className="icon">
-                  <img src="upload.png" alt="Post" />
+                  <img src="upload.png" alt="Post" loading="lazy" />
                 </div>
                 <div>
                   <h3>Post</h3>
@@ -283,7 +287,7 @@ export default function Starting() {
                   }}
               >
                 <div className="icon">
-                  <img src="setting.png" alt="Setting" />
+                  <img src="setting.png" alt="Setting" loading="lazy"/>
                 </div>
                 <div>
                   <h3>Setting</h3>
@@ -296,7 +300,7 @@ export default function Starting() {
         <div className="middle-bar">
           {!checkMsg && (
             <div className="logo-img" data-aos="zoom-in">
-              <img src="l-markethub.png" alt="" />
+              <img src="l-markethub.png" alt="Preview" loading="lazy"/>
             </div>
           )}
           <div>{<Home />}</div>
@@ -309,8 +313,9 @@ export default function Starting() {
                 <div className="profileimg">
                   {prodata.image && (
                     <img
-                      src={`${baseURL}/images/${prodata.image}`}
+                      src={`${imgURL}/${prodata.image}`}
                       alt="Profile"
+                      loading="lazy"
                     />
                   )}
                 </div>

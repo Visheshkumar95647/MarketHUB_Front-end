@@ -4,6 +4,7 @@ import "../App.css";
 import ProfileContext from "../Home/ProfileContext";
 import io from "socket.io-client";
 import { baseURL } from "../../URL";
+import { imgURL } from "../../imgURL";
 export default function ChatHome() {
   const { userTochat, setChecklogo, setCheckSingleChat } =
     useContext(ChatContext);
@@ -185,12 +186,14 @@ export default function ChatHome() {
         <div className="top-part">
           <div className="profile">
             <div className="arrow-back" onClick={handleClick}>
-              <img src="back-arrow.png" alt="" />
+              <img src="back-arrow.png" alt="Preview"
+  loading="lazy" />
             </div>
             <div className="chat-profile-img">
               <img
-                src={`${baseURL}/images/${userTochat.image}`}
-                alt=""
+                src={`${imgURL}/${userTochat.image}`}
+                alt="Preview"
+  loading="lazy"
               />
             </div>
             <div className="chat-profile-username">
@@ -218,8 +221,9 @@ export default function ChatHome() {
                   <div className="right-msg">
                     <div className="pro">
                       <img
-                        src={`${baseURL}/images/${msg.sender.image}`}
-                        alt=""
+                        src={`${imgURL}/${msg.sender.image}`}
+                        alt="Preview"
+  loading="lazy"
                       />
                     </div>
                     <div>
@@ -233,8 +237,9 @@ export default function ChatHome() {
                   <div className="left-msg">
                     <div className="pro">
                       <img
-                        src={`${baseURL}/images/${msg.sender.image}`}
-                        alt=""
+                        src={`${imgURL}/${msg.sender.image}`}
+                        alt="Preview"
+  loading="lazy"
                       />
                     </div>
                     <div>
@@ -260,7 +265,8 @@ export default function ChatHome() {
             onKeyDown={handleEnter}
           />
           <div className="send" onClick={handleSendMessage}>
-            <img src="send.png" alt="" />
+            <img src="send.png" alt="Preview"
+  loading="lazy" />
           </div>
         </div>
       </div>

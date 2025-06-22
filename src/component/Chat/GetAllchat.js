@@ -6,6 +6,7 @@ import ChatContext, { ChatProvider } from "./ChatProvider";
 import ChatHome from "./ChatHome";
 import CreategrpChat from "./CreategrpChat";
 import { baseURL } from "../../URL";
+import { imgURL } from "../../imgURL";
 export default function GetAllchat() {
   const [allChatuser, setAllchatuser] = useState([]);
   const { prodata } = useContext(ProfileContext);
@@ -91,8 +92,10 @@ export default function GetAllchat() {
                         <div className="chat-profile-img">
                           {chatUser.image && (
                             <img
-                              src={`${baseURL}/images/${chatUser.image}`}
+                              src={`${imgURL}/${chatUser.image}`}
                               alt={chatUser.name || "User image"}
+                             
+  loading="lazy"
                             />
                           )}
                         </div>

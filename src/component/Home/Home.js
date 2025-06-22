@@ -4,6 +4,7 @@ import ProfileContext from "./ProfileContext";
 import { useNavigate } from "react-router-dom";
 import checkingComponent from "./CheckComponent";
 import { baseURL } from "../../URL";
+import { imgURL } from "../../imgURL";
 import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 import ProfileSection from "./ProfileSection";
@@ -19,19 +20,18 @@ export default function Home() {
     checkHome,
     setCheckHome,
     checkSearch,
-    checkSetting, 
+    checkSetting,
     setCheckSetting,
     setCheckSearch,
     checkProfile,
     setCheckProfile,
     setUsernameData,
     checkPost,
-    setCheckPost,
     setCheckmsg,
     checkMsg,
   } = useContext(checkingComponent);
   const { prodata } = useContext(ProfileContext);
-  const { setuserTochat, userTochat  , checkLogo} = useContext(ChatContext);
+  const { setuserTochat, userTochat, checkLogo } = useContext(ChatContext);
   // const {setUsername} = useContext(ProfileSec);
 
   const navigate = useNavigate();
@@ -128,8 +128,7 @@ export default function Home() {
 
   return (
     <>
-      { 
-        !checkPost &&
+      {!checkPost &&
         !checkMsg &&
         !checkProfile &&
         !checkSearch &&
@@ -139,14 +138,18 @@ export default function Home() {
           const users = allProfile.filter(
             (profile) => profile._id === product.id
           );
-          const images = product.Productimages.map((img) => ({
-            url: `${baseURL}/product/${img}`,
-          }));
+          const images = product.Productimages.map((img) => {
+            console.log(img);
+            return {
+              url: `${imgURL}/${img}`,
+            };
+          });
 
           return (
             <div key={i} className="uploads">
               {users.map((user, j) => (
                 <div key={j}>
+                  {console.log(user.image)}
                   <div className="top">
                     <div className="top-data">
                       <div>
@@ -154,8 +157,9 @@ export default function Home() {
                           <>
                             <img
                               className="profileimage"
-                              src={`${baseURL}/images/${user.image}`}
+                              src={`${imgURL}/${user.image}`}
                               alt="Profile"
+                              loading="lazy"
                             />
                           </>
                         )}
@@ -175,7 +179,7 @@ export default function Home() {
                     {images.map((image, index) => (
                       <div key={index}>
                         <div>
-                          <img src={image.url} alt="" />
+                          <img src={image.url} alt="Preview" loading="eager"/>
                         </div>
                       </div>
                     ))}
@@ -183,8 +187,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="bottom">
-              </div>
+              <div className="bottom"></div>
             </div>
           );
         })}
@@ -192,27 +195,32 @@ export default function Home() {
         !checkHome &&
         checkProfile &&
         !checkPost &&
-        !checkMsg && !checkSetting && <ProfileSection />}
+        !checkMsg &&
+        !checkSetting && <ProfileSection />}
       {!checkHome &&
         !checkProfile &&
         !checkPost &&
         !checkMsg &&
-        checkSearch &&!checkSetting && <Search />}
+        checkSearch &&
+        !checkSetting && <Search />}
       {!checkSearch &&
         !checkHome &&
         !checkProfile &&
         !checkMsg &&
-        checkPost &&!checkSetting && <Post />}
+        checkPost &&
+        !checkSetting && <Post />}
       {!checkSearch &&
         !checkHome &&
         !checkProfile &&
         !checkPost &&
-        checkMsg &&!checkSetting && <GetAllchat />}
-        {!checkSearch &&
+        checkMsg &&
+        !checkSetting && <GetAllchat />}
+      {!checkSearch &&
         !checkHome &&
         !checkProfile &&
         !checkPost &&
-        !checkMsg && checkSetting && <Setting/>}
+        !checkMsg &&
+        checkSetting && <Setting />}
     </>
   );
 }

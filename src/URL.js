@@ -1,1 +1,1 @@
-export const baseURL = `https://markethub-backend-werf.onrender.com`;
+export const baseURL = "http://localhost:5000";

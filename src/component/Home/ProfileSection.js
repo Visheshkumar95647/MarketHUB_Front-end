@@ -4,6 +4,7 @@ import { Slide } from "react-slideshow-image";
 import ProfileContext from "./ProfileContext";
 import ChatContext from "../Chat/ChatProvider";
 import { baseURL } from "../../URL";
+import { imgURL } from "../../imgURL";
 export default function ProfileSection() {
   const {
     setCheckHome,
@@ -53,8 +54,9 @@ export default function ProfileSection() {
             <div className="profileImg">
               {usernameData.image && (
                 <img
-                  src={`${baseURL}/images/${usernameData.image}`}
+                  src={`${imgURL}/${usernameData.image}`}
                   alt="Profile"
+                  loading="lazy"
                 />
               )}
             </div>
@@ -133,7 +135,7 @@ export default function ProfileSection() {
           {product &&
             product.map((data) => {
               const allimages = data.Productimages.map((img) => ({
-                url: `${baseURL}/product/${img}`,
+                url: `${imgURL}/${img}`,
               }));
 
               return (
@@ -143,7 +145,7 @@ export default function ProfileSection() {
                       {allimages.map((image, index) => (
                         <div key={index}>
                           <div>
-                            <img src={image.url} alt="" />
+                            <img src={image.url} alt="Preview" loading="lazy" />
                           </div>
                         </div>
                       ))}

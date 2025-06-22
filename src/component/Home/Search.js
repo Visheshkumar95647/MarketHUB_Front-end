@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import checkingComponent from "./CheckComponent";
 import ChatContext from "../Chat/ChatProvider";
 import { baseURL } from "../../URL";
+import { imgURL } from "../../imgURL";
 // Import the loading gif
 import loadingGif from "../Home/Animation/loading.gif";
 
@@ -112,7 +113,7 @@ export default function Search() {
         
           {loading ? (
             <div className="loading">
-              <img src={loadingGif} alt="Loading..." />
+              <img src={loadingGif} alt="Loading..."  loading="lazy"/>
             </div>
           ) : user.length > 0 ? (
             user.map((u, index) => (
@@ -121,8 +122,9 @@ export default function Search() {
                   <div>
                     {u.image && (
                       <img
-                        src={`${baseURL}/images/${u.image}`}
+                        src={`${imgURL}/${u.image}`}
                         alt="Profile"
+                        loading="lazy"
                       />
                     )}
                   </div>
